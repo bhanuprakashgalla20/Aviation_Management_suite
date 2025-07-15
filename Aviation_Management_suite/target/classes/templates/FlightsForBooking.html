@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border=2px style="border-collapse: collapse">
+	<tr>
+	<th>flightNumber</th>
+	<th>origin</th>
+	<th>destination</th>
+	<th>departureTime</th>
+	<th>arrivalTime</th>
+	<th>airline</th>
+	<th>status</th>
+	</tr>
+	<tr th:each="flight:${flightsForBook}">
+	<td th:text="${flight.flightnumber}"></td>
+	<td th:text="${flight.origin}"></td>
+	<td th:text="${flight.destination}"></td>
+	<td th:text="${flight.journystarttime}"></td>
+	<td th:text="${flight.journyendtime}"></td>
+	<td th:text="${flight.airline}"></td>
+	<td th:text="${flight.status}"></td>
+	<td>
+		<form action="bookflight">
+			<input th:value="${flight.flightnumber}" hidden="true" name="flightnumber">
+			<input th:value="${flight.economyrate}" hidden="true" name="economyrate">
+			<input th:value="${flight.bussinesrate}" hidden="true" name="bussinesrate">
+			<input th:value="${passengerDetails.id}" hidden="true" name="passengerid">
+			<input type="submit" value="BookFlight">
+		</form>
+	</td>
+
+	</tr>
+	</table>
+</body>
+</html>

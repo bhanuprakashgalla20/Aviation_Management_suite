@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Flight added sucessfully</h1>
+	<div>
+		<form action="addflight">
+			<input type="text" placeholder="Enter flightNumber" name="flightnumber" required="required"><br>
+			<input type="text" placeholder="Enterv Origen" name="origin" required="required"><br>
+			<input type="text" placeholder="Enter destination" name="destination" required="required"><br>
+			Enter depature time <input type="time" placeholder="Enter depature time" name="journystarttime" required="required"><br>
+			Enter Arrival time<input type="time" placeholder="Enter Arrival time" name="journyendtime" required="required"><br>
+			<input type="text" placeholder="Enter Air line" name="airline" required="required"><br>
+			<select name="status">
+			<option>--status--</option>
+			<option>delay</option>
+			<option>deferd</option>
+			<option>depatured</option>
+			<option>in air</option>
+			<option>Diverted</option>
+			<option>Return to Gate</option>
+			<option>Canceled</option>
+			<option>Arrived</option>
+			<option>Estimated</option>
+			<option>Gate closed</option>
+			<option>Boarding</option>
+			<option>Final Call</option>
+			</select>
+			<input type="submit" value="Add Flight"><br>
+		</form>
+	</div>
+</body>
+</html>

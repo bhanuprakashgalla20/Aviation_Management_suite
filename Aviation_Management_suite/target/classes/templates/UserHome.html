@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reach Your Destination within time</h1>
+    <form action="searchflighttobook">
+        <input type="text" placeholder="FROM" name="origin"><br>
+        <input type="text" placeholder="TO" name="destination"><br>
+        <input th:value="${passenger.email}"  name="id">
+        <input type="submit" value="Search flight">
+    </form>
+	<h3 th:text="${exceptionmsg}" style="color: red"></h3>
+	<h3 th:text="${cancledmsg}" style="color: green"></h3>
+    <form action="bookedticket">
+     <input th:value="${passenger.id}"  name="id">
+        <label for="">CHECK BOOKED TICKET</label><input type="submit" value="BOOKED TICKET">
+    </form>
+</body>
+</html>

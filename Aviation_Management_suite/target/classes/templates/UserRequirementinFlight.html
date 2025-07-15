@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="userrequirementforbooking">
+    <input th:value="${flightnumber}" name="flightnumber" hidden="true">
+    <input th:value="${passengerid}" name="passengerid" hidden="true">
+    <input type="date" value="${bookingdate}" name="bookingdate" hidden="true">
+     <lable for="">Select Date for Booking</lable><br>
+        <input type="date" name="bookeddate"><br>
+        <p th:text="${exceptionmsg}" style="color: red"></p>
+        <label for="">Select Economy</label>
+        <input type="radio" value="economy" id="economy" name="seat"><label for="economy">Economy Class</label>
+        <input type="radio" value="business" id="business" name="seat"><label for="business">Business Class</label>
+        <label for="">Select Food Preference</label> <br>
+            <input type="radio" name="mealpreference" id="veg" value="vegetarian"><label for="veg">vegetarian</label> <br>
+            <input type="radio" name="mealpreference" id="non-veg" value="non-vegetarian"><label for="non-veg">non-vegetarian</label> <br>
+            <input type="radio" name="mealpreference" id="vegan" value="vegan"><label for="vegan">vegan</label> <br>
+        <input type="submit" value="BOOKFLIGHT">
+    </form>
+</body>
+</html>

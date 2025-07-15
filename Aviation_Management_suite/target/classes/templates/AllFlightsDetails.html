@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>All Flights Details</h2>
+	<table border=2px style="border-collapse: collapse">
+	<tr>
+	<th>flightNumber</th>
+	<th>origin</th>
+	<th>destination</th>
+	<th>departureTime</th>
+	<th>arrivalTime</th>
+	<th>airline</th>
+	<th>status</th>
+	</tr>
+	<tr th:each="flight:${flights}">
+	<td th:text="${flight.flightnumber}"></td>
+	<td th:text="${flight.origin}"></td>
+	<td th:text="${flight.destination}"></td>
+	<td th:text="${flight.journystarttime}"></td>
+	<td th:text="${flight.journyendtime}"></td>
+	<td th:text="${flight.airline}"></td>
+	<td th:text="${flight.status}"></td>
+	<td>
+		<form action="updateflight">
+			<input th:value="${flight.flightid}" hidden="true" name="flightid">
+			<input type="submit" value="Update">
+		</form>
+	</td>
+	<td>
+		<form action="cancelflight">
+			<input th:value="${flight.flightid}" hidden="true" name="flightid">
+			<input type="submit" value="Cancle">
+		</form>
+	</td>
+	<td>
+		<form action="addcrew">
+			<input th:value="${flight.flightid}" hidden="true" name="flightid">
+			<input type="submit" value="ADDCREW">
+		</form>
+	</td>
+	</tr>
+	</table>
+	
+	<form action="flightinfo">
+	<input type="submit" value="AddFlight">
+	</form>
+</body>
+</html>

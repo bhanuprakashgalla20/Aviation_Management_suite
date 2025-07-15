@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<form action="bookingconform">
+	<input th:value="${bookingDetails.flightnumber}" name="flightnumber" hidden="true">
+	<input th:value="${bookingDetails.passengerid}" name="passengerid" hidden="true">
+	<input th:value="${bookingDetails.mealpreference}" name="mealpreference" hidden="true">
+	<input th:value="${bookingDetails.bookingreference}" name="bookingreference" hidden="true">
+	<input th:value="${bookingDetails.seat}" name="seat" hidden="true">
+	<input th:value="${bookingDetails.seatno}" name="seatno" hidden="true">
+	<input th:value="${bookingDetails.bookingdate}" name="bookingdate" hidden="true">
+	<input th:value="${bookingDetails.bookeddate}" name="bookeddate" hidden="true">
+	<input th:value="${bookingDetails.status}" name="status" hidden="true">
+	<input th:value="${bookingDetails.flightarrivaltime}" name="flightarrivaltime" hidden="true">
+	
+	    <input type="radio" name="paymentmethod" id="gpay" value="Gpay" ><label for="gpay"><img src="" alt="gpay">Gpay</label> <br>
+	    <input type="radio" name="paymentmethod" id="upi" value="UPI" ><label for="upi"><img src="" alt="upi">UPI</label><br>
+	    <input type="radio" name="paymentmethod" id="netbanking" value="NetBanking" ><label for="netbanking"><img src="" alt="netbanking">NetBanking</label><br>
+	    <input type="radio" name="paymentmethod" id="card" value="Creditcard/debitcard" ><label for="card"><img src="" alt="card">Creditcard/Debitcard</label><br>
+	    <input type="radio" name="paymentmethod" id="wallet" value="wallet"><label for="wallet" ><img src="" alt="wallet">Wallet Payment</label><br>
+	    <input type="submit" value="MAKE PAYMENT">
+	  </form>
+	
+</body>
+</html>

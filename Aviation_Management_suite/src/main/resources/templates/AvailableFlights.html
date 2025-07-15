@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border=2px style="border-collapse: collapse">
+        <tr>
+        <th>flightNumber</th>
+        <th>origin</th>
+        <th>destination</th>
+        <th>departureTime</th>
+        <th>arrivalTime</th>
+        <th>airline</th>
+        <th>status</th>
+        </tr>
+        <tr th:each="flight:${flights}">
+        <td th:text="${flight.flightNumber}"></td>
+        <td th:text="${flight.origin}"></td>
+        <td th:text="${flight.destination}"></td>
+        <td th:text="${flight.departureTime}"></td>
+        <td th:text="${flight.arrivalTime}"></td>
+        <td th:text="${flight.airline}"></td>
+        <td th:text="${flight.status}"></td>
+        <td>
+            <form action="bookflight">
+                <input th:value="${flight.flightid}" hidden="true" name="flightid">
+                <input type="submit" value="BOOK FLIGHT">
+            </form>
+        </td>
+        </tr>
+        </table>
+</body>
+</html>

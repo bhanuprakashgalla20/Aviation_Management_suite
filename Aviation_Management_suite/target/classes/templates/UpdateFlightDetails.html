@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+	<h1 th:text="${updateflight}"></h1>
+		<form action="addflight">
+			<input name="flightid" th:value="${updateflight.flightid}"  hidden="true">
+			<input name="flightnumber"  th:value="${updateflight.flightnumber}" readonly="readonly"><br>
+			<input name="origin" th:value="${updateflight.origin}" readonly="readonly"><br>
+			<input name="destination" th:value="${updateflight.destination}" readonly="readonly"><br>
+			Enter depature time <input type="time" placeholder="Enter depature time" name="journystarttime" required="required"><br>
+			Enter Arrival time<input type="time" placeholder="Enter Arrival time" name="journyendtime" required="required"><br>
+			<input type="text" placeholder="Enter Air line" name="airline" th:value="${updateflight.airline}" required="required" readonly="readonly"><br>
+			<select name="status">
+			<option>--status--</option>
+			<option>delay</option>
+			<option>deferd</option>
+			<option>depatured</option>
+			<option>in air</option>
+			<option>Diverted</option>
+			<option>Return to Gate</option>
+			<option>Canceled</option>
+			<option>Arrived</option>
+			<option>Estimated</option>
+			<option>Gate closed</option>
+			<option>Boarding</option>
+			<option>Final Call</option>
+			</select>
+			<input type="submit"><br>
+		</form>
+	</div>
+</body>
+</html>

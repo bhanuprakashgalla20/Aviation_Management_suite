@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userregistration</title>
+</head>
+<body>
+    <div class="userregistartion" id="userregistration">
+    <h3 th:text="${exceptionmsg}" style="color: red"></h3>
+        <form action="userregistartion"> 
+            <input type="text" placeholder="Enter your Name" name="name"><br>
+            <input type="email" placeholder="Enter Your emailid" name="email"><br>
+            <input type="number" placeholder="Enter Your Mobile Number" name="phonenumber"><br>
+            <input type="text" placeholder="Enter Your Passport Number" name="passportnumber"><br>
+            <input type="text" placeholder="Enter Your Nationality" name="nationality"><br>
+           <label for="gender">gender</label><br> <input type="radio" value="male" name="gender" > MALE<br>
+            <input type="radio" value="female" name="gender">FEMALE<br>
+            <input type="radio" value="others" name="gender">OTHERS<br>
+           <label for="">Enter Date Of Birth</label> <br><input type="date" name="dateofbirth"><br>
+           <input type="password" name="password" placeholder="Enter Password"><br>
+           <input type="password" name="conformpassword" id="" placeholder="Conform your password"><br>
+           <input type="submit" value="SIGN-IN">
+        </form>
+    </div>
+</body>
+</html>
